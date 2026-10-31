@@ -1,0 +1,74 @@
+{
+  "experiment_id": "1bf687d7-e364-4ee3-8d4b-6e5b4a57e6d3",
+  "name": "CLI Benchmark Test",
+  "configuration": {
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "retrieval_strategy": "hybrid",
+    "top_k": 5,
+    "rerank": true,
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "llm_model": "gemini",
+    "sample_count": 5
+  },
+  "metrics": {
+    "Precision@K": 0.0,
+    "Recall@K": 0.0,
+    "MRR": 0.0,
+    "NDCG@K": 0.0,
+    "Hit_Rate@K": 0.0,
+    "Faithfulness": 1.0,
+    "Answer_Relevancy": 0.8057,
+    "Answer_Correctness": 0.2906,
+    "Context_Recall": 0.675,
+    "Citation_Precision": 1.0,
+    "Citation_Recall": 0.0,
+    "Citation_Coverage": 0.5334,
+    "Citation_Validity": 1.0,
+    "Avg_Latency_ms": 32.4395,
+    "Avg_Tokens": 185.0,
+    "Estimated_Cost_USD": 2.8e-05
+  },
+  "sample_details": [
+    {
+      "question": "What is multi-head attention and why is it used?",
+      "answer": "Self-Attention and Multi-Head Attention Self-attention, sometimes called intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence. [S1] Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions. [S1] Multi-head attention allows the model to jointly attend to information from different representation subspaces. [S2]",
+      "faithfulness": 1.0,
+      "relevancy": 0.8,
+      "citation_precision": 1.0,
+      "latency_ms": 36.34905815124512
+    },
+    {
+      "question": "How does self-attention compute token relationships?",
+      "answer": "Self-Attention and Multi-Head Attention Self-attention, sometimes called intra-attention, is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence. [S1] Self-attention has been used successfully in a variety of tasks including reading comprehension, abstractive summarization, textual entailment and learning task-independent sentence representations. [S1] Self-attention relates different positions of a single sequence. [S2]",
+      "faithfulness": 1.0,
+      "relevancy": 0.7,
+      "citation_precision": 1.0,
+      "latency_ms": 30.01570701599121
+    },
+    {
+      "question": "What is Reciprocal Rank Fusion (RRF)?",
+      "answer": "Hybrid Retrieval and Fusion Hybrid retrieval merges dense embeddings search with BM25 keyword matching using Reciprocal Rank Fusion (RRF). [S1]",
+      "faithfulness": 1.0,
+      "relevancy": 1.0,
+      "citation_precision": 1.0,
+      "latency_ms": 31.754016876220703
+    },
+    {
+      "question": "Why is cross-encoder reranking beneficial after hybrid retrieval?",
+      "answer": "Cross-Encoder Reranking Initial retrieval returns candidate passages from vector databases like Qdrant and lexical indices. [S1] Hybrid Retrieval and Fusion Hybrid retrieval merges dense embeddings search with BM25 keyword matching using Reciprocal Rank Fusion (RRF). [S1] A cross-encoder reranker performs deep cross-attention between the query and passage candidates, sorting the most contextually relevant passages to the top. [S1]",
+      "faithfulness": 1.0,
+      "relevancy": 0.8286,
+      "citation_precision": 1.0,
+      "latency_ms": 32.46879577636719
+    },
+    {
+      "question": "How are citations validated in the RAG system?",
+      "answer": "Automated Evaluation Metrics RAG pipelines are systematically evaluated across retrieval and generation. [S1] Retrieval-Augmented Generation (RAG) Architecture and Evaluation Retrieval-Augmented Generation (RAG) combines dense semantic retrieval and sparse lexical search with generative large language models. [S1] Rather than relying solely on parametric memory, the system fetches relevant passages from an external corpus. [S1]",
+      "faithfulness": 1.0,
+      "relevancy": 0.7,
+      "citation_precision": 1.0,
+      "latency_ms": 31.61001205444336
+    }
+  ]
+}
