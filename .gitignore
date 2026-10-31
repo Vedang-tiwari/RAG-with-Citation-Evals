@@ -1,0 +1,28 @@
+# Virtual Environment
+venv/
+.env
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.pytest_cache/
+
+# Databases & Vector DB data
+*.db
+*.sqlite3
+data/qdrant/
+data/qdrant_test/
+data/uploads/
+.tmp/
+
+# Node & Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+
