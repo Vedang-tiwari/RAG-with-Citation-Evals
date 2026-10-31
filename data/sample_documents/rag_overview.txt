@@ -1,0 +1,20 @@
+Retrieval-Augmented Generation (RAG) Architecture and Evaluation
+
+Retrieval-Augmented Generation (RAG) combines dense semantic retrieval and sparse lexical search with generative large language models. Rather than relying solely on parametric memory, the system fetches relevant passages from an external corpus.
+
+Hybrid Retrieval and Fusion
+
+Hybrid retrieval merges dense embeddings search with BM25 keyword matching using Reciprocal Rank Fusion (RRF). Dense vectors capture conceptual semantics and synonyms, while BM25 guarantees high-precision matching of specialized terminology, acronyms, and product codes.
+
+Cross-Encoder Reranking
+
+Initial retrieval returns candidate passages from vector databases like Qdrant and lexical indices. A cross-encoder reranker performs deep cross-attention between the query and passage candidates, sorting the most contextually relevant passages to the top.
+
+Citation Grounding and Verification
+
+Citation grounding assigns unique source identifiers [S1], [S2] to retrieved passages and requires the LLM to ground each assertion with corresponding evidence. The citation validator inspects generated responses to verify that citations point to genuine documents and match authentic text snippets, eliminating ungrounded hallucinations.
+
+Automated Evaluation Metrics
+
+RAG pipelines are systematically evaluated across retrieval and generation. Retrieval metrics include Precision@K, Recall@K, MRR, and NDCG@K. Generation metrics include Faithfulness, Answer Relevancy, Context Recall, and Answer Correctness. Custom citation metrics evaluate Citation Precision, Recall, Coverage, and Validity.
+
